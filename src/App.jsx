@@ -1,10 +1,23 @@
-function App() {
+function Header() {
   return (
     <div>
       <header>
-        <a href="#">Me</a> | <a href="#posts-index">Person 1</a> | <a href="#posts-new">Person 2</a>
+        <a href="#">Me</a> | <a href="#posts-new">Person 1</a> | <a href="#posts-index">Person 2</a>
       </header>
-
+    </div>
+  );
+}
+function Content() {
+  return (
+    <div>
+      <New />
+      <Index />
+    </div>
+  );
+}
+function New() {
+  return (
+    <div>
       <div id="posts-new">
         <h1>A blog by Hana</h1>
         <body>welcome to my blog page now heres a picture of pluto</body>
@@ -14,7 +27,12 @@ function App() {
         />
         <p>and dont tell me its not a planet</p>
       </div>
-
+    </div>
+  );
+}
+function Index() {
+  return (
+    <div>
       <div id="posts-index">
         <h1>qwerty</h1>
         <body>is a person that exsists</body>
@@ -22,16 +40,30 @@ function App() {
           src="https://png.pngtree.com/png-vector/20190419/ourmid/pngtree-yellow-smiley-face-png-image_960884.jpg"
           alt=""
         />
-        <h2>asdf</h2>
+        <h1>asdf</h1>
         <body>is another exsisting person</body>
         <img src="https://wallpapers.com/images/featured/coolest-pictures-88c269e953ar0aw4.jpg" alt="" />
       </div>
-
+    </div>
+  );
+}
+function Footer() {
+  return (
+    <div>
       <footer>
-        <p></p>
+        <p>Copyright 2022</p>
       </footer>
     </div>
   );
 }
 
+function App() {
+  return (
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
+}
 export default App;
