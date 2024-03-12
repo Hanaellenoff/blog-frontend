@@ -12,12 +12,9 @@ function New() {
     <div>
       <div id="posts-new">
         <h1>A blog by Hana</h1>
-        <body>welcome to my blog page now heres a picture of pluto</body>
-        <img
-          src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2024/01/19153732/pluto-1600x900.jpg"
-          width="500"
-        />
-        <p>and dont tell me its not a planet</p>
+        <p>What to do when you are bored</p>
+        <img src="https://wallpapers.com/images/featured/coolest-pictures-88c269e953ar0aw4.jpg" width="500" />
+        <p>just dont tell me plutos not a planet</p>
       </div>
     </div>
   );
@@ -29,7 +26,7 @@ function Index(props) {
       {props.posts.map((post) => (
         <div key={post.id} className="posts">
           <h1>The title is {post.title}</h1>
-          <body>{post.body}</body>
+          <p>{post.body}</p>
           <img src={post.image} alt="" />
         </div>
       ))}
