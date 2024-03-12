@@ -2,13 +2,16 @@ function App() {
   return (
     <div>
       <header>
-        <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a>
+        <a href="#">Me</a> | <a href="#posts-index">Person 1</a> | <a href="#posts-new">Person 2</a>
       </header>
 
       <div id="posts-new">
         <h1>A blog by Hana</h1>
         <body>welcome to my blog page now heres a picture of pluto</body>
-        <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2024/01/19153732/pluto-1600x900.jpg" />
+        <img
+          src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2024/01/19153732/pluto-1600x900.jpg"
+          width="500"
+        />
         <p>and dont tell me its not a planet</p>
       </div>
 
