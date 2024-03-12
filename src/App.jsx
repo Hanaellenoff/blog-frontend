@@ -22,22 +22,17 @@ function New() {
     </div>
   );
 }
-function Index(props, posts) {
-  console.log("The posts are", posts);
+function Index(props) {
+  console.log(props);
   return (
-    <div>
-      <p>The name is {props.name}</p>
-      <div id="posts-index">
-        <h1>qwerty</h1>
-        <body>is a person that exsists</body>
-        <img
-          src="https://png.pngtree.com/png-vector/20190419/ourmid/pngtree-yellow-smiley-face-png-image_960884.jpg"
-          alt=""
-        />
-        <h1>asdf</h1>
-        <body>is another exsisting person</body>
-        <img src="https://wallpapers.com/images/featured/coolest-pictures-88c269e953ar0aw4.jpg" alt="" />
-      </div>
+    <div id="posts-index">
+      {props.posts.map((post) => (
+        <div key={post.id} className="posts">
+          <h1>The title is {post.title}</h1>
+          <body>{post.body}</body>
+          <img src={post.image} alt="" />
+        </div>
+      ))}
     </div>
   );
 }
@@ -51,7 +46,6 @@ function Footer() {
   );
 }
 function Content() {
-  let name = "Test";
   let posts = [
     {
       id: 1,
