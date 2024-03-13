@@ -5,3 +5,46 @@
 html {
   scroll-behavior: smooth;
 }
+
+header {
+  background-image: url(https://wallpapers.com/images/featured/coolest-pictures-88c269e953ar0aw4.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 10em
+}
+
+header a {
+  color: chartreuse;
+  
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(0deg, green, white)
+}
+
+footer {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 2%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px
+}
+
+.card img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  padding: 1em;
+  border-radius: 1em;
+  border: 5px;
+  background-color: rgb(8, 4, 56) !important;
+  color: silver;
+}
