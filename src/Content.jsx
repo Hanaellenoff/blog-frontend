@@ -8,10 +8,10 @@ export function Content() {
   const handleIndexPosts = () => {
     axios.get("http://localhost:3000/posts.json").then((response) => {
       setPosts(response.data);
-      useEffect(handleIndexPosts, []);
-      console.log(posts);
+      // console.log(posts);
     });
   };
+  useEffect(handleIndexPosts, []);
   return (
     <div>
       <New />
