@@ -12,13 +12,26 @@ export function Content() {
       console.log(posts);
     });
   };
+  const [currentPost, setCurrentPost] = useState({});
+  const [isPostsShowVisible, setIsPostsShowVisible] = useState(false);
+  const handleShowPost = (post) => {
+    setIsPostsShowVisible(true);
+    setCurrentPost(post);
+  };
+
+  const handleClose = () => {
+    setIsPostsShowVisible(false);
+  };
+
   useEffect(handleIndexPosts, []);
   return (
     <div>
       <New />
-      <Index posts={posts} />
-      <Modal show={true}>
-        <p>TEST</p>
+      <Index posts={posts} onShowPost={handleShowPost} />
+      <Modal show={isPostsShowVisible} onClose={handleClose}>
+        <h2>Title: {currentPost.title}</h2>
+        <p>Description: {currentPost.body}</p>
+        <p>created at: {currentPost.created_at}</p>
       </Modal>
     </div>
   );

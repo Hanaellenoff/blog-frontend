@@ -8,9 +8,9 @@ html {
 
 header {
   background-image: url(https://wallpapers.com/images/featured/coolest-pictures-88c269e953ar0aw4.jpg);
-  background-size: 100% auto; /* Stretch the image to fill the entire width of the header */
+  background-size: cover; /* Stretch the image to fill the entire width of the header */
   background-repeat: no-repeat; /* Prevent the background from repeating */
-  background-position: center; /* Center the background image */
+  background-position: center center; /* Center the background image */
   text-align: center;
   padding: 10em;
   line-height: 50px;
