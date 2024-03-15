@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export function Index(props) {
+export function PostsIndex(props) {
   console.log(props);
   return (
     <div id="posts-index">
@@ -9,6 +9,7 @@ export function Index(props) {
             <h1>{post.title}</h1>
             <p>{post.body}</p>
             <img src={post.image} alt="" />
+
             <button onClick={() => props.onShowPost(post)}>More info</button>
           </div>
         ))}

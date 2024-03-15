@@ -12,8 +12,9 @@ header {
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-position: center center; /* Center the background image */
   text-align: center;
-  padding: 10em;
-  line-height: 50px;
+  padding: 8em, 5em, 5em, 5em;
+  height: 50%;
+  position: relative;
 }
 
 header a {
@@ -27,7 +28,7 @@ body {
 }
 
 footer {
-  background-color: cadetblue;
+  background-color: rgb(110, 134, 134);
   text-align: center;
   padding: 2%;
 }
