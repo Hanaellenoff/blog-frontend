@@ -29,6 +29,7 @@ export function Content() {
     });
   };
   const handleUpdatePost = (id, params) => {
+    console.log("handleUpdatePhoto", params);
     axios.patch(`http://localhost:3000/posts/${id}.json`, params).then((response) => {
       setPosts(
         posts.map((post) => {
@@ -43,14 +44,21 @@ export function Content() {
     });
   };
 
+  const handleDestroyPost = (id) => {
+    axios.delete(`http://localhost:3000/posts/${id}.json`).then((response) => {
+      setPosts(posts.filter((post) => post.id !== id));
+      handleClose();
+    });
+  };
+
   useEffect(handleIndexPosts, []);
   return (
     <div>
-      <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <PostsNew onCreatePost={handleCreatePost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
-        <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} />
+        <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDeletePost={handleDestroyPost} />
       </Modal>
+      <PostsIndex posts={posts} onShowPost={handleShowPost} />
     </div>
   );
 }
